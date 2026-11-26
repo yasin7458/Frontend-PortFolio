@@ -11,7 +11,7 @@ function Contact() {
 
   const contactRef = useRef(null);
 
-  const email = "your.email@example.com";
+  const email = "yashinmithani950@gmail.com";
 
   const copyEmail = () => {
     navigator.clipboard.writeText(email);
