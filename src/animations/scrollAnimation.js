@@ -11,8 +11,7 @@ export const scrollReveal = (element) => {
   const ctx = gsap.context(() => {
 
     // SECTION REVEAL
-
-    gsap.utils.toArray(".scroll-section").forEach((section) => {
+    gsap.utils.toArray(".scroll-section", element).forEach((section) => {
 
       gsap.from(section, {
         y: 70,
@@ -23,7 +22,8 @@ export const scrollReveal = (element) => {
         scrollTrigger: {
           trigger: section,
           start: "top 85%",
-          toggleActions: "play none none reverse"
+          toggleActions: "play none none reverse",
+          invalidateOnRefresh: true
         }
 
       });
@@ -31,8 +31,7 @@ export const scrollReveal = (element) => {
     });
 
     // IMAGE REVEAL
-
-    gsap.utils.toArray(".scroll-image").forEach((image) => {
+    gsap.utils.toArray(".scroll-image", element).forEach((image) => {
 
       gsap.from(image, {
         scale: 0.85,
@@ -44,7 +43,8 @@ export const scrollReveal = (element) => {
         scrollTrigger: {
           trigger: image,
           start: "top 85%",
-          toggleActions: "play none none reverse"
+          toggleActions: "play none none reverse",
+          invalidateOnRefresh: true
         }
 
       });
@@ -52,8 +52,7 @@ export const scrollReveal = (element) => {
     });
 
     // CARD REVEAL
-
-    gsap.utils.toArray(".scroll-card").forEach((card) => {
+    gsap.utils.toArray(".scroll-card", element).forEach((card) => {
 
       gsap.from(card, {
         y: 60,
@@ -65,7 +64,8 @@ export const scrollReveal = (element) => {
         scrollTrigger: {
           trigger: card,
           start: "top 88%",
-          toggleActions: "play none none reverse"
+          toggleActions: "play none none reverse",
+          invalidateOnRefresh: true
         }
 
       });
@@ -73,8 +73,7 @@ export const scrollReveal = (element) => {
     });
 
     // DECORATIVE ELEMENTS
-
-    gsap.utils.toArray(".scroll-decoration").forEach((item) => {
+    gsap.utils.toArray(".scroll-decoration", element).forEach((item) => {
 
       gsap.from(item, {
         rotation: -15,
@@ -86,7 +85,8 @@ export const scrollReveal = (element) => {
         scrollTrigger: {
           trigger: item,
           start: "top 90%",
-          toggleActions: "play none none reverse"
+          toggleActions: "play none none reverse",
+          invalidateOnRefresh: true
         }
 
       });
