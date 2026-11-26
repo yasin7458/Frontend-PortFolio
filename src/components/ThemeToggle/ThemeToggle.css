@@ -1,0 +1,71 @@
+
+/* THEME TOGGLE */
+
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+
+  background: var(--card-bg);
+  color: var(--text-color);
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* ICON */
+
+.theme-toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.4s ease;
+}
+
+/* HOVER */
+
+.theme-toggle:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #FFFFFF;
+
+  transform: rotate(15deg);
+}
+
+.theme-toggle:hover .theme-toggle-icon {
+  transform: rotate(-15deg);
+}
+
+/* FOCUS */
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
+/* MOBILE */
+
+@media (max-width: 680px) {
+
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+
+    font-size: 15px;
+  }
+
+}

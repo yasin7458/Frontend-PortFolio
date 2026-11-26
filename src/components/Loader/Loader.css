@@ -1,0 +1,387 @@
+
+/* ================================= */
+/* LOADER MAIN */
+/* ================================= */
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 35px 5%;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  background-color: var(--bg-color);
+  background-image: url("/images/loader-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: var(--text-color);
+}
+
+/* ================================= */
+/* THEME OVERLAY */
+/* ================================= */
+
+.loader::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background: var(--bg-color);
+  opacity: 0.78;
+
+  pointer-events: none;
+}
+
+/* ================================= */
+/* TOP AREA */
+/* ================================= */
+
+.loader-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 2;
+}
+
+.loader-chapter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chapter-number {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.chapter-label,
+.loader-location {
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.loader-location {
+  color: var(--accent-color);
+}
+
+/* ================================= */
+/* CENTER CONTENT */
+/* ================================= */
+
+.loader-center {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  margin: auto 0;
+}
+
+/* ================================= */
+/* EYEBROW */
+/* ================================= */
+
+.loader-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.loader-eyebrow span {
+  width: 35px;
+  height: 2px;
+
+  background: var(--accent-color);
+}
+
+/* ================================= */
+/* MAIN TITLE */
+/* ================================= */
+
+.loader-title {
+  font-family: Impact, "Arial Black", sans-serif;
+
+  font-size: clamp(100px, 18vw, 240px);
+  font-weight: 900;
+
+  line-height: 0.85;
+  letter-spacing: -8px;
+
+  color: var(--text-color);
+}
+
+.loader-title span {
+  color: var(--accent-color);
+}
+
+/* ================================= */
+/* SUBTITLE */
+/* ================================= */
+
+.loader-subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 12px;
+
+  font-family: Impact, "Arial Black", sans-serif;
+
+  font-size: clamp(35px, 7vw, 85px);
+  line-height: 0.95;
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--text-color);
+}
+
+/* ================================= */
+/* DESCRIPTION */
+/* ================================= */
+
+.loader-description {
+  margin-top: 25px;
+
+  font-family: Georgia, serif;
+  font-size: clamp(17px, 2vw, 25px);
+  font-style: italic;
+
+  color: var(--secondary-color);
+}
+
+/* ================================= */
+/* BOTTOM AREA */
+/* ================================= */
+
+.loader-bottom {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 550px;
+
+  margin-left: auto;
+}
+
+/* ================================= */
+/* PROGRESS INFO */
+/* ================================= */
+
+.loader-progress-info {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.loader-counter {
+  color: var(--accent-color);
+}
+
+/* ================================= */
+/* PROGRESS BAR */
+/* ================================= */
+
+.loader-progress-track {
+  width: 100%;
+  height: 3px;
+
+  background: var(--border-color);
+
+  overflow: hidden;
+}
+
+.loader-progress-bar {
+  width: 100%;
+  height: 100%;
+
+  background: var(--accent-color);
+
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* ================================= */
+/* FOOTER */
+/* ================================= */
+
+.loader-footer {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 18px;
+
+  font-family: monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  color: var(--secondary-color);
+}
+
+/* ================================= */
+/* BACKGROUND DECORATION */
+/* ================================= */
+
+.loader-decoration {
+  position: absolute;
+  z-index: 1;
+
+  top: -150px;
+  right: -150px;
+
+  width: 450px;
+  height: 450px;
+
+  border-radius: 50%;
+
+  background-image:
+    radial-gradient(
+      var(--text-color) 1px,
+      transparent 1px
+    );
+
+  background-size: 9px 9px;
+
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+/* ================================= */
+/* TABLET RESPONSIVE */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+  .loader {
+    min-height: 550px;
+    padding: 25px 6%;
+
+    background-position: 55% center;
+  }
+
+  .loader-title {
+    font-size: clamp(85px, 19vw, 150px);
+    letter-spacing: -5px;
+  }
+
+  .loader-subtitle {
+    gap: 10px;
+  }
+
+  .loader-bottom {
+    max-width: 100%;
+  }
+
+  .loader-decoration {
+    width: 350px;
+    height: 350px;
+  }
+
+}
+
+/* ================================= */
+/* MOBILE RESPONSIVE */
+/* ================================= */
+
+@media (max-width: 480px) {
+
+  .loader {
+    min-height: 500px;
+    padding: 22px 6%;
+
+    background-position: 55% center;
+  }
+
+  .chapter-number {
+    font-size: 23px;
+  }
+
+  .chapter-label,
+  .loader-location {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .loader-title {
+    font-size: 22vw;
+    letter-spacing: -4px;
+  }
+
+  .loader-subtitle {
+    font-size: 10vw;
+  }
+
+  .loader-eyebrow {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .loader-description {
+    font-size: 17px;
+  }
+
+  .loader-progress-info {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .loader-footer {
+    font-size: 7px;
+    letter-spacing: 0.8px;
+  }
+
+  .loader-decoration {
+    width: 250px;
+    height: 250px;
+
+    top: -90px;
+    right: -90px;
+  }
+
+}
+
+/* ================================= */
+/* REDUCED MOTION */
+/* ================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .loader-decoration {
+    animation: none;
+  }
+
+}

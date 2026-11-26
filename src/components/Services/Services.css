@@ -1,0 +1,359 @@
+
+/* SERVICES SECTION */
+.services {
+  width: 100%;
+  padding: 140px 5%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.services-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+}
+
+/* SERVICES HEADING */
+.services-heading {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.services-heading-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.services-label,
+.services-count {
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.services-label {
+  color: var(--accent-color);
+}
+
+.services-count {
+  color: var(--secondary-color);
+}
+
+.services-heading h2 {
+  margin: 0;
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: clamp(75px, 12vw, 155px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -5px;
+  color: var(--text-color);
+}
+
+.services-heading h2 span {
+  color: var(--accent-color);
+}
+
+.services-heading p {
+  max-width: 520px;
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--secondary-color);
+}
+
+/* SERVICES LIST */
+.services-list {
+  width: 100%;
+}
+
+/* SERVICE ITEM */
+.service-item {
+  width: 100%;
+  padding: 35px 0 50px;
+  border-top: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
+}
+
+.service-item:last-child {
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* SERVICE NUMBER */
+.service-number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.service-number > span:first-child {
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: 55px;
+  line-height: 1;
+  color: var(--accent-color);
+}
+
+.service-symbol {
+  font-size: 35px;
+  color: var(--accent-color);
+  display: inline-block;
+  transform-origin: center center;
+}
+
+
+/* SERVICE CONTENT */
+.service-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 8%;
+}
+
+/* SERVICE INFORMATION */
+.service-info {
+  width: 100%;
+}
+
+.service-category {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent-color);
+}
+
+.service-info h3 {
+  max-width: 650px;
+  margin: 0;
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: clamp(40px, 5vw, 65px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.service-item:hover .service-info h3 {
+  color: var(--accent-color);
+}
+
+.service-info p {
+  max-width: 570px;
+  margin: 22px 0 0;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--secondary-color);
+}
+
+/* SERVICE TECHNOLOGIES */
+.service-tech {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.service-tech span {
+  padding: 11px 14px;
+  border: 1px solid var(--border-color);
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--secondary-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.service-tech span:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #FFFFFF;
+  transform: translateY(-4px);
+}
+
+/* SERVICES FOOTER */
+.services-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 45px;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--secondary-color);
+}
+
+/* TABLET RESPONSIVE */
+@media (max-width: 1024px) {
+  .services {
+    padding: 110px 5%;
+  }
+
+  .services-heading {
+    margin-bottom: 75px;
+  }
+
+  .service-content {
+    gap: 5%;
+  }
+
+  .service-info h3 {
+    font-size: 45px;
+  }
+
+  .service-info p {
+    font-size: 15px;
+  }
+
+  .service-tech span {
+    padding: 9px 11px;
+    font-size: 9px;
+  }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .services {
+    padding: 90px 6%;
+  }
+
+  .services-heading {
+    margin-bottom: 65px;
+  }
+
+  .services-heading h2 {
+    font-size: clamp(65px, 13vw, 100px);
+    letter-spacing: -3px;
+  }
+
+  .services-heading p {
+    font-size: 16px;
+  }
+
+  .service-item {
+    padding: 30px 0 40px;
+  }
+
+  .service-number > span:first-child {
+    font-size: 45px;
+  }
+
+  .service-symbol {
+    font-size: 30px;
+  }
+
+  .service-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .service-info h3 {
+    max-width: 100%;
+    font-size: clamp(35px, 8vw, 48px);
+  }
+
+  .service-info p {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .service-tech {
+    gap: 8px;
+  }
+
+  .services-footer {
+    font-size: 9px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .services {
+    padding: 75px 6%;
+  }
+
+  .services-heading-top {
+    gap: 15px;
+  }
+
+  .services-label,
+  .services-count {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .services-heading h2 {
+    font-size: 15vw;
+    letter-spacing: -2px;
+  }
+
+  .services-heading p {
+    font-size: 15px;
+  }
+
+  .service-number {
+    margin-bottom: 22px;
+  }
+
+  .service-number > span:first-child {
+    font-size: 40px;
+  }
+
+  .service-symbol {
+    font-size: 27px;
+  }
+
+  .service-category {
+    font-size: 9px;
+  }
+
+  .service-info h3 {
+    font-size: 36px;
+  }
+
+  .service-info p {
+    font-size: 15px;
+  }
+
+  .service-tech span {
+    padding: 8px 10px;
+    font-size: 8px;
+  }
+
+  .services-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 8px;
+  }
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  .service-item,
+  .service-symbol,
+  .service-info h3,
+  .service-tech span {
+    transition: none;
+  }
+}

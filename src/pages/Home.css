@@ -1,0 +1,76 @@
+
+/* HOME PAGE */
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+/* SECTION BASE */
+
+.home-page section {
+  width: 100%;
+  position: relative;
+}
+
+
+/* SECTION TRANSITIONS */
+
+.home-page section:not(:first-child) {
+  border-top: 1px solid var(--border-color);
+}
+
+
+/* ANCHOR SCROLL */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+
+/* IMAGE BASE */
+
+.home-page img {
+  max-width: 100%;
+}
+
+
+/* SELECTION */
+
+.home-page ::selection {
+  background: var(--accent-color);
+  color: #FFFFFF;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  html {
+    scroll-padding-top: 75px;
+  }
+
+  .home-page {
+    overflow: hidden;
+  }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+}
